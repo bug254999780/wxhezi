@@ -1,0 +1,73 @@
+/* pages/kd/kuaidi.wxss */
+.body{
+  /* display: flex; */
+   flex-direction: column; 
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  box-sizing: border-box; 
+  /* color: white; */
+  height: 100%;
+
+}
+.inputview{
+ border:  1px solid #fff; 
+ background-color: #fff;
+ margin-top: 3em;
+display:flex;
+    align-items:stretch;
+    flex-wrap:nowrap;
+    text-align: center
+}
+
+.inputV{
+  height:2em;
+  width:89%;
+}
+.buttonV{
+  width: 60%;
+  padding-left:0px;
+  padding-right:0px;
+  font-size:15px;
+  margin-top: 1em;
+  
+}
+.queryView{
+  padding-top: 1em;
+}
+.container2{
+    width:100%;
+    display:flex;
+    align-items:stretch;
+    flex-wrap:nowrap;
+    text-align: center;
+    color: #757575;
+    border-bottom: 1px solid #e5ebf1; 
+}
+.line_1{
+text-align: center;
+width: 30%;
+font-size: 0.8em;
+padding-top: 0.5em;
+}
+.line_2{
+  text-align: left;
+  font-size: 0.8em;
+  width: 90%;
+  padding-top: 0.5em;
+  padding-left: 1%;
+}
+
+.line{
+
+width:2px;
+background:#e5ebf1;
+margin-top:0.2em;
+ 
+}
+imgsao{
+  width:30px;
+  height:20px;
+}
+
+page{height:100%;  background-color: #f4f7f8;}

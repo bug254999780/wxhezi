@@ -1,0 +1,39 @@
+<view class='body' >
+
+     <view class='queryView'  >
+       快递查询
+    </view>
+    <view>
+    <view class='inputview' style='' >
+    <input class='inputV' type='number' confirm-type="done" maxlength='50'   bindinput="kddNoInput" placeholder="请输入快递单号" value='{{kddNo}}'  focus='true' />
+         <image class="imgsao" style='width:10%;height:1.9em;'  bindtap="bindViewTap" src="/images/kd/sao.png"></image>
+    </view>
+    </view>
+    
+  <button type="defaule"  
+          class='buttonV' bindtap='queryClick' style='' > 查询 </button>
+<view class='' >
+ 
+       
+
+       <view wx:if="{{flag}}">
+       <view class='container2'  wx:for="{{kdresult}}" wx:for-index="index" wx:for-item="t" >
+         <view class='line_1' >
+          
+          <text>{{t.AcceptTimeTIME}} \n {{t.AcceptTimeMMDD}}</text>
+          
+          </view>  
+          <view class='line'>
+          </view>
+          <view class='line_2'>
+          {{t.AcceptStation}}
+          </view> 
+       </view>
+       </view>
+       <view wx:else>
+       <view class='line_1' >{{kdresult}} </view>  
+       </view>
+        
+</view>
+
+</view>

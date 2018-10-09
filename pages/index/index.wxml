@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+     <text class='welcome'>
+    {{motto}}
+    </text>
+  </view>
+  <view class='usermotto'>
+   <button type="defaule"  
+          class='buttonV' bindtap='clickWeather' style='' > 查天气 </button>
+    <button type="defaule"  
+          class='buttonV' bindtap='clickKd' style='' > 查快递 </button>
+    <button type="defaule"  
+          class='buttonV' bindtap='clickNews' style='' > 胖瘦检查 </button>  
+  </view>
+</view>

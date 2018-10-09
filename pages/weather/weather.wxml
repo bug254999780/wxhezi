@@ -1,0 +1,49 @@
+<view class='bodys' style=''>
+
+     <view class="lbs-class" >
+        {{local_adderrs}}
+    </view>
+    <view class="lbs-wether" >
+    <text>{{now.cond.txt}}</text>
+    </view>
+    <view class="lbs-wether2" >
+    <text>{{now.tmp}}°</text>
+    </view>
+<view class="container3">
+<view class='now_aqi1'>{{week}}</view>
+<view class='now_aqi2'>PM2.5{{aqi.pm25}} 空气质量{{aqi.qlty}}</view>
+</view>
+  
+
+  <view class="container2">
+       <view class='item1'  wx:for="{{hourly_forecast}}" wx:for-index="index" wx:for-item="t" >
+     
+        <view class='hor_date'>{{t.date}}</view>  
+      <view class='hor'>{{t.cond.txt}}</view> 
+  <image src='{{t.imgsrc}}' class='img_1'></image>
+
+      <view class='hor_tmp'>{{t.tmp}}°</view> 
+      
+      
+      <view class='hor'>
+      {{t.wind.sc}}
+      {{t.wind.dir}}
+      
+      </view> 
+       
+       </view>
+    </view>
+
+<view class="container4">
+
+     <view class='flex-r' wx:for="{{daily_forecast}}" wx:for-index="index" wx:for-item="w">
+     <view class='st1'>{{w.date}}</view>
+     <view class='st2'><image src='{{w.imgsrc}}' class='img_2'></image></view>
+     <view class='st1'>{{w.weatherChanage}}</view>  
+     <view class='st3'>{{w.tmp.min}}~{{w.tmp.max}}°</view>
+       
+    </view> 
+</view>
+
+
+</view>

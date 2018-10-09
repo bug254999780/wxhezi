@@ -1,0 +1,122 @@
+/* pages/weather/weather.wxss */
+.feel {
+  color: green;
+  size: 50px;
+  background-color: blue;
+}
+.temperature-class {
+  font-size: 20px;
+  color: red;
+}
+.wea-class {
+  font-size: 20px;
+  color: white;
+}
+.title-class {
+  font-size: 20px;
+  color: red;
+}
+.lbs-class {
+  font-weight: 400;
+  padding-top:6%;
+}
+.lbs-wether {
+  padding-top:1%;
+  font-size:0.8em; 
+}
+.lbs-wether2 {
+  padding-top:1%;
+  font-size: 2.5em;
+}
+.bodys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: white;
+} 
+page{height:100%;
+background-image: url( "http://www.gofbox.com/net_images/wx/weather_back.jpg")
+}
+
+.item1{
+    width:100%;
+
+    height:13em;
+}
+.container2{
+    width:100%;
+    display:flex;
+    align-items:stretch;
+    flex-wrap:nowrap;
+    text-align: center
+}
+.hor{
+  height: 2.5em;
+  padding-top:0.4em; 
+  font-size:0.8em;
+}
+.hor_tmp{
+  height: 1.4em;
+  padding-top:0.08em; 
+}
+.img_1{
+  width: 2em;
+  height: 2em;
+  padding-top: 0.4em;
+}
+.line{
+width: 100%;
+height: 2rpx;
+background: #aaa;
+}
+.now_aqi1{
+width: 100%;
+text-align: left;
+padding-left:0.5em;
+}
+.now_aqi2{
+width: 100%;
+text-align: right;
+padding-right:0.5em;
+}
+.container3{
+    width:100%;
+    display:flex;
+    align-items:stretch;
+    flex-wrap:nowrap;
+    color: white;
+}
+.hor_date{
+  height: 1.4em;
+  padding-top:0.08em; 
+  font-size: 0.8em;
+}
+.container4{
+    width:100%;
+}
+.hor_b{
+  height: 2em;
+}
+.img_2{
+  width: 2em;
+  height: 2em;
+}
+.st1{
+ width: 33.33%;
+ text-align: center;
+}
+.st2{
+ width: 33.33%;
+ text-align: center;
+}
+.st3{
+width: 33.33%;
+text-align: center;
+}
+.flex-r{
+  display:flex;
+  justify-content:space-between;
+  font-size:0.8em;
+}
