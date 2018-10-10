@@ -5,6 +5,7 @@
     "pages/weather/weather",
     "pages/kd/kuaidi",
     "pages/news/news",
+    "pages/imgocr/imgocr",
     "pages/logs/logs"
     
   ],

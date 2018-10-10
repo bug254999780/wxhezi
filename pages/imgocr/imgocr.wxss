@@ -9,21 +9,20 @@
 }
 .btnPhoto{
   width: 50%;
-  background-color:darkblue;
+  background-color:rgb(20, 20, 29);
   color: #fff;
 }
 page{
-  background-image: url('http://www.gofbox.com/net_images/wx/news_back.png');
   background-size:cover;
   height:100%
 }
 .show_style{
   text-align: left;
-  margin-left: 30%; 
+  margin:4%;
 }
 .img_loadding{
   text-align: center;
 }
 .view_context{
-  color:#fff;
+  color:rgb(39, 19, 19);
 }

@@ -74,6 +74,11 @@ const reqUrl = n => {
   // var baseUrl = "http://10.11.29.57:8080/open-api"
   return app.globalData.baseUrl+"/"+n;
 }
+const reqShortUrl = n => {
+  // var baseUrl = "https://www.gofbox.com/open-api"
+  // var baseUrl = "http://10.11.29.57:8080/open-api"
+  return "http://api.weibo.com/2/short_url/shorten.json?source=2849184197&url_long=" + n;
+}
 // const weekItem = ['日', '一', '二', '三', '四', '五', '六']
 const formatDay = d => {
   var date = new Date(d)
@@ -97,5 +102,6 @@ module.exports = {
   formatSub: formatSub,
   formatTimeKey: formatTimeKey,
   wxReq: wxReq,
+  reqShortUrl: reqShortUrl,
 }
 

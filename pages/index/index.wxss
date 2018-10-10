@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 80%;
 }
 
 .userinfo-avatar {
@@ -17,7 +18,7 @@
 }
 
 .usermotto {
-      display:flex;
+    display:flex;
     align-items:stretch;
     flex-wrap:nowrap;
     text-align: center
@@ -28,11 +29,17 @@
   font-weight: 800;
   line-height: 30px;
   }
+  .welcome1 {
+  color: rgba(32, 31, 31, 0.795);
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 20px;
+  }
   .buttonV{
   padding-left:0px;
   padding-right:0px;
   font-size:15px;
   margin-left: 10px;
-  width: 6em;
+  width: 5em;
 
   }
