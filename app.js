@@ -70,8 +70,8 @@ App({
     userInfo: null,
     isPay:false,
     weekItem:['日', '一', '二', '三', '四', '五', '六'],
-    baseUrl: 'http://localhost:8080/open-api',
-    //  baseUrl: 'https://www.gofbox.com/open-api',
+    // baseUrl: 'http://localhost:8080/open-api',
+     baseUrl: 'https://www.gofbox.com/open-api',
 
   }
 })

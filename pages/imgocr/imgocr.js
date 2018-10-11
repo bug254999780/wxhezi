@@ -1,21 +1,8 @@
 const util = require('../../utils/util.js')
 //获取应用实例
 const app = getApp()
-const innerAudioContext = wx.createInnerAudioContext()
 Page({
   onReady: function (e) {
-    // 使用 wx.createAudioContext 获取 audio 上下文 context
-    // this.audioCtx = wx.createAudioContext('myAudio')
-    // var res = wx.getSystemInfoSync()
-    // if (res.platform == 'ios') {
-    //   this.audio = wx.getBackgroundAudioManager()
-    // } else {
-    //   this.audio = wx.createInnerAudioContext();
-    // }
-
-    // this.audio.title = "音乐文件";
-    // this.audio.src = "本地文件地址";
-    // this.audio.play();
   },
   /**
    * 页面的初始数据
@@ -25,17 +12,15 @@ Page({
      imgsrcUrl:'',
      flag:false,
      dplay:'none',
-    poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
-    name: '此时此刻',
-    author: '许巍',
-    src: '',
+     poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
+     voiceName: '此时此刻',
+     author: '说人话',
+     src: '',
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    innerAudioContext.autoplay = true
-    innerAudioContext.src = '/images/imgloc/output.mp3'
   },
 
   startTakePhoto: function () {
@@ -55,12 +40,18 @@ Page({
           filePath: tempFilePaths[0],
           name: 'file',
           success: function (res) {
-            var data = res.data;
+            var data = JSON.parse(res.data)
+            var voiceValue = data.result;
+            if (voiceValue.length>512){
+              voiceValue = voiceValue.substring(0,512)
+            }
+            voiceValue=encodeURI(voiceValue)
             //关闭加载动画
             that.setData({
               dplay: 'none',
               dataValue: data.result,
-              // src: data.mp3url,
+              voiceName: data.result.substring(0,6),
+              src: util.reqUrl("imageocr/getMp3?txtValue=" + voiceValue),
               flag:true
             })
           }

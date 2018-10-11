@@ -39,7 +39,6 @@ Page({
   queryClick:function(){
     var that=this
     var url = 'express/getkd'
-    console.log(wx.getStorageSync('x_token'))
     wx.request({
       url: util.reqUrl(url),
       data: { expNo: this.data.kddNo}, 

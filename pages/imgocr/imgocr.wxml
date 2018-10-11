@@ -6,15 +6,19 @@
  </image>
 </view> -->
  <view style='margin-top:10%;'>
- <button class='btnPhoto' bindtap='startTakePhoto'>说人话</button>
+ <button class='btnPhoto' bindtap='startTakePhoto'>选择照片</button>
  </view>
  <view>
-<view class='img_loadding'>
+
+ <view>
+ <audio style='margin:3%;' poster="{{poster}}" name="{{voiceName}}" author="{{author}}"  src="{{src}}" id="myAudio" controls loop></audio>
+ </view>
+ <view class='img_loadding'>
    <image style='width:8em;height:8em;display:{{dplay}};'  mode="aspectFit" src='/images/news/loadding.gif'> 
  </image>
  </view>
-
  <view wx:if="{{flag}}" class='view_context'>
+
  <view class='show_style'>
  <text>
  {{dataValue}}
@@ -22,9 +26,7 @@
  </view>
  </view> 
  
- <!-- <view>
- <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="/images/imgloc/output.mp3" id="myAudio" controls loop></audio>
- </view> -->
+
 
 
 </view>
