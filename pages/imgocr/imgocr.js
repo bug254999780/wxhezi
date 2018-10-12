@@ -1,9 +1,8 @@
 const util = require('../../utils/util.js')
 //获取应用实例
 const app = getApp()
+const innerAudioContext = wx.createInnerAudioContext();
 Page({
-  onReady: function (e) {
-  },
   /**
    * 页面的初始数据
    */
@@ -12,15 +11,14 @@ Page({
      imgsrcUrl:'',
      flag:false,
      dplay:'none',
-     poster: 'http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000',
-     voiceName: '此时此刻',
-     author: '说人话',
-     src: '',
+     playPasue: '/images/imgocr/play.png',
+     playPasueEvent:'play',
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    innerAudioContext.src = "http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&uin=346897220&vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&fromtag=46";
   },
 
   startTakePhoto: function () {
@@ -31,7 +29,7 @@ Page({
       success: function (res) {
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         var tempFilePaths = res.tempFilePaths
-        that.setData({ imgsrcUrl: tempFilePaths[0],
+        that.setData({
           dplay:'inline-block'
         })
         var upLoadUrl = util.reqUrl("imageocr/upload")
@@ -46,14 +44,14 @@ Page({
               voiceValue = voiceValue.substring(0,512)
             }
             voiceValue=encodeURI(voiceValue)
+            innerAudioContext.src = util.reqUrl("imageocr/getMp3?txtValue=" + voiceValue)
             //关闭加载动画
             that.setData({
               dplay: 'none',
               dataValue: data.result,
-              voiceName: data.result.substring(0,6),
-              src: util.reqUrl("imageocr/getMp3?txtValue=" + voiceValue),
               flag:true
             })
+          
           }
         })
       }
@@ -65,6 +63,22 @@ Page({
    */
   onReady: function (e) {
     
+  },
+  play: function(){
+    innerAudioContext.play();
+    var that = this;
+    that.setData({
+      playPasue:'/images/imgocr/pause.png',
+      playPasueEvent:'pause',
+    })
+  },
+  pause: function(){
+    innerAudioContext.pause();
+    var that = this;
+    that.setData({
+      playPasue: '/images/imgocr/play.png',
+      playPasueEvent: 'play',
+    })
   },
   /**
    * 生命周期函数--监听页面显示
@@ -105,6 +119,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    
   }
 })
