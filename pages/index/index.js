@@ -44,6 +44,11 @@ Page({
       url: '../distinguish/distinguish'
     })
   },
+  clickDis: function () {
+    wx.navigateTo({
+      url: '../dis/dis'
+    })
+  },
 
   onReady: function(){
     var that = this

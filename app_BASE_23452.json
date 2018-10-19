@@ -1,20 +1,18 @@
 {
   "pages":[
    
-    "pages/index/index",
+   "pages/index/index",
     "pages/weather/weather",
     "pages/kd/kuaidi",
     "pages/news/news",
     "pages/imgocr/imgocr",
-    "pages/distinguish/distinguish",
-    "pages/dis/dis",
     "pages/logs/logs"
     
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "black",
-    "navigationBarTitleText": "黑科技垄断",
+    "navigationBarTitleText": "盒子里生活",
     "navigationBarTextStyle":"black"
   }
 }
