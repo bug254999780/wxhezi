@@ -1,48 +1,53 @@
 <!--pages/news/news.wxml-->
-<view>
-
- </view>
- 
-<view class='imgloc'>
- <image style='width:12em;height:14em;' src='{{imgsrcUrl}}'>
- 
- </image>
+<view class='textcss_view'>
+  <text>选择人脸图片、识别后可语音解读</text>
 </view>
- <view>
- <button class='btnPhoto' bindtap='startTakePhoto'>大脸识别</button>
- </view>
+<view class='imgcss_view'>
+  <image src='/images/news/tianjia.png' bindtap='startTakePhoto' class='imgcss'></image>
+  <image src='/images/news/play.png' bindtap='startTakePhoto' class='imgcss'></image>
+</view>
 
- <view>
-<view class='img_loadding'>
-   <image style='width:8em;height:8em;display:{{dplay}};'  mode="aspectFit" src='/images/news/loadding.gif'> 
-  <!-- <image style='width:8em;height:8em;display:inline-block;'  mode="aspectFit" src='/images/news/loadding.gif'> -->
- 
- </image>
- </view>
 
- <view wx:if="{{flag}}" class='view_context'>
- <view class='show_style'>
- 年龄：{{dataValue.age}}岁
- </view>
- <view class='show_style'>
- 帅气：{{dataValue.beauty}}分
- </view>
- <view class='show_style'>
- 性别：{{dataValue.gender}}
- </view>
-  <view class='show_style'>
- 人种：{{dataValue.race}}
- </view>
+<view class='imgloc'>
+  <image style='width:12em;height:14em;' src='{{imgsrcUrl}}'>
 
-   <view class='show_style'>
- 表情：{{dataValue.expression}}
- </view>
+  </image>
+</view>
+
+
+
+
+
+  <view class='img_loadding'>
+    <image style='width:8em;height:8em;display:{{dplay}};' mode="aspectFit" src='/images/news/loadding.gif'>
+
+
+    </image>
+  </view>
+
+  <view wx:if="{{flag}}" class='view_context'>
     <view class='show_style'>
-  脸的面积：{{face_s}} 公顷
- </view>
+      年龄：{{dataValue.age}}岁
+    </view>
+    <view class='show_style'>
+      帅气：{{dataValue.beauty}}分
+    </view>
+    <view class='show_style'>
+      性别：{{dataValue.gender}}
+    </view>
+    <view class='show_style'>
+      人种：{{dataValue.race}}
+    </view>
+
+    <view class='show_style'>
+      表情：{{dataValue.expression}}
+    </view>
+    <view class='show_style'>
+      脸的面积：{{face_s}} 公顷
+    </view>
 
 
-<!-- <view>
+    <!-- <view>
  <text>左眼中心：{{dataValue.landmark[0].x}}-{{dataValue.landmark[0].y}}</text>
  <text>右眼中心：{{dataValue.landmark[1].x}}-{{dataValue.landmark[1].y}}</text>
  <text>鼻尖：{{dataValue.landmark[2].x}}-{{dataValue.landmark[2].y}}</text>
@@ -55,7 +60,4 @@
  <text>width:{{dataValue.location.top}}</text>
  <text>height:{{dataValue.location.top}}</text>
  </view>-->
- </view> 
- 
- 
-</view>
+  </view>

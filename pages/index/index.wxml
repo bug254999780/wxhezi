@@ -1,27 +1,22 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
+ 
+  <view class='usermotto'>
+          <image src='/images/index/weather.png' bindtap='clickWeather' class='imgicocss' ></image>
+          <image src='/images/index/ems.png' bindtap='clickKd' class='imgicocss' ></image>
+          <image src='/images/index/face.png' bindtap='clickNews' class='imgicocss' ></image>  
+  </view>
+    <view class='usermotto'>
+    <image src='/images/index/voice.png' bindtap='clickimgocr' class='imgicocss' ></image>
+          <image src='/images/index/distinguish.png' bindtap='clickdistinguish' class='imgicocss' ></image>
+          <image src='/images/index/face.png' bindtap='clickNews' class='imgicocss' ></image>  
+  </view>
+ <view class="userinfo">
      <text class='welcome'>
     {{motto}}
     </text>
     <text class='welcome1'>
     ——{{mottoFrom}}
     </text>
-  </view>
-  <view class='usermotto'>
-   <button type="defaule"  
-          class='buttonV' bindtap='clickWeather' style='' > 看天气 </button>
-    <button type="defaule"  
-          class='buttonV' bindtap='clickKd' style='' > 找快递 </button>
-    <button type="defaule"  
-          class='buttonV' bindtap='clickNews' style='' > 脸大不 </button>  
-  </view>
-    <view class='usermotto'>
-   <button type="defaule"  
-          class='buttonV' bindtap='clickimgocr' style='' > 说人话 </button>
-    <button type="defaule"  
-          class='buttonV' bindtap='clickKd' style='' > 数人头 </button>
-    <button type="defaule"  
-          class='buttonV' bindtap='clickNews' style='' > 黑科技 </button>  
   </view>
 </view>

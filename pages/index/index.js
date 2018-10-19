@@ -39,6 +39,11 @@ Page({
       url: '../imgocr/imgocr'
     })
   },
+  clickdistinguish: function () {
+    wx.navigateTo({
+      url: '../distinguish/distinguish'
+    })
+  },
 
   onReady: function(){
     var that = this
@@ -63,5 +68,19 @@ Page({
     // queryIndexTitle();
     
   },
+  onShareAppMessage:function(ops){
+    return {
+      title: '黑科技',
+      path: 'pages/index/index',
+      success: function (res) {
+        // 转发成功
+        console.log("转发成功:" + JSON.stringify(res));
+      },
+      fail: function (res) {
+        // 转发失败
+        console.log("转发失败:" + JSON.stringify(res));
+      }
+    }
+  }
 
 })

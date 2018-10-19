@@ -8,34 +8,37 @@
 
 }
 .btnPhoto{
-  width: 50%;
-  background-color:darkblue;
+  width: 35%;
+  background-color:rgb(20, 20, 29);
   color: #fff;
 }
 page{
-  /* background-image: url('http://www.gofbox.com/net_images/wx/news_back.png'); */
   background-size:cover;
   height:100%
 }
 .show_style{
   text-align: left;
-  margin-left: 30%; 
+  margin:4%;
 }
 .img_loadding{
   text-align: center;
 }
 .view_context{
-  color:rgb(219, 23, 23);
+  color:rgb(39, 19, 19);
 }
-.imgcss{
-  width: 3.2em;
-  height: 3.2em;
-  padding: 0.5em;
+.photocss{
+  width: 4em;
+  height: 4em;
 }
-.imgcss_view{
+.textCss{
+  margin-top:10%;
   text-align: center;
+  font-size: 1em;
+  color: black;
+  font-weight: 800;
 }
-.textcss_view{
-  text-align: center;
-  padding: 0.5em;
+.btnCss{
+  margin-top:5%;
+  text-align:center;
+  padding:3%; 
 }
