@@ -22,6 +22,6 @@
     <button type="defaule"  
           class='buttonV' bindtap='clickKd' style='' > 数人头 </button>
     <button type="defaule"  
-          class='buttonV' bindtap='clickNews' style='' > 黑科技 </button>  
+          class='buttonV' bindtap='clickDis' style='' > 黑科技 </button>  
   </view>
 </view>

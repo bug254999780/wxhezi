@@ -39,6 +39,11 @@ Page({
       url: '../imgocr/imgocr'
     })
   },
+  clickDis: function () {
+    wx.navigateTo({
+      url: '../dis/dis'
+    })
+  },
 
   onReady: function(){
     var that = this

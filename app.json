@@ -6,6 +6,7 @@
     "pages/kd/kuaidi",
     "pages/news/news",
     "pages/imgocr/imgocr",
+    "pages/dis/dis",
     "pages/logs/logs"
     
   ],

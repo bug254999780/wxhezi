@@ -1,0 +1,42 @@
+ 
+<view class='imgloc'>
+ <image style='width:100%;height:100%;' src='{{imgsrcUrl}}'>
+ </image>
+</view>
+
+ <view class='btnview'>
+
+ <view class='img_loadding'>
+   <image style='width:8em;height:8em;display:{{dplay}};'  mode="aspectFit" src='/images/news/loadding.gif'> 
+ </image>
+ </view>
+
+
+ <!-- <view wx:if="{{flag}}" class='view_context'>
+
+ <view class='show_style'>
+ <text>
+ {{dataValue}}
+ </text>
+ </view>
+ </view> -->
+
+
+
+
+
+
+<view class='btnCss'>
+  <view>
+ <image src='/images/news/loaddingx.gif' class='newImg' />
+ 
+</view>
+  <view class='dbtn'>
+   <button class='btnn'  bindtap="startTakePhoto">识图</button>
+   <button class='btnn' bindtap="{{playPasueEvent}}"  bindtap="startTakePhoto">{{playPasue}}</button>
+  </view>
+ </view>
+
+
+
+</view>
