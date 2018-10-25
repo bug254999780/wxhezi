@@ -33,7 +33,7 @@ Page({
           imgsrcUrl: tempFilePaths[0],
           dplay: 'inline-block'
         })
-        var upLoadUrl = util.reqUrl("distinguish/general")
+        var upLoadUrl = util.reqUrlv2("distinguish/general")
         wx.uploadFile({
           url: upLoadUrl,
           filePath: tempFilePaths[0],

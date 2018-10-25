@@ -3,28 +3,28 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
-    var that = this
-    var x_token = wx.getStorageSync('x_token')
-    if(!x_token){
-      // 登录
-      wx.login({
-        success: res => {
-          // 发送 res.code 到后台换取 openId, sessionKey, unionId 
-          var url = this.globalData.baseUrl + "/login/login"
-          wx.request({
-            url: url,
-            data: {
-              resCode: res.code
-            },
-            success: function (rr) {
-              if (rr.data){
-               wx.setStorageSync('x_token', rr.data)
-             }
-            }
-          })
-        }
-      })
-    }
+    // var that = this
+    // var x_token = wx.getStorageSync('x_token')
+    // if(!x_token){
+    //   // 登录
+    //   wx.login({
+    //     success: res => {
+    //       // 发送 res.code 到后台换取 openId, sessionKey, unionId 
+    //       var url = this.globalData.baseUrl + "/login/login"
+    //       wx.request({
+    //         url: url,
+    //         data: {
+    //           resCode: res.code
+    //         },
+    //         success: function (rr) {
+    //           if (rr.data){
+    //            wx.setStorageSync('x_token', rr.data)
+    //          }
+    //         }
+    //       })
+    //     }
+    //   })
+    // }
 
 
     // // 登录
@@ -70,8 +70,8 @@ App({
     userInfo: null,
     isPay:false,
     weekItem:['日', '一', '二', '三', '四', '五', '六'],
-    baseUrl: 'http://localhost:8080/open-api',
-    //  baseUrl: 'https://www.gofbox.com/open-api',
+    // baseUrl: 'http://localhost:8080',
+    baseUrl: 'https://www.gofbox.com',
 
   }
 })

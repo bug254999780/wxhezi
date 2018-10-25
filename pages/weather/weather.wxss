@@ -34,10 +34,10 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  color: white;
+  /* color: white; */
 } 
 page{height:100%;
-background-image: url( "http://www.gofbox.com/net_images/wx/weather_back.jpg")
+/* background-image: url( "http://www.gofbox.com/net_images/wx/weather_back.jpg") */
 }
 
 .item1{

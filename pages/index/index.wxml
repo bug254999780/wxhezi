@@ -8,7 +8,7 @@
   </view>
     <view class='usermotto'>
     <image src='/images/index/voice.png' bindtap='clickimgocr' class='imgicocss' ></image>
-          <image src='/images/index/distinguish.png' bindtap='clickdistinguish' class='imgicocss' ></image>
+          <image src='/images/index/distinguish.png' bindtap='clickDis' class='imgicocss' ></image>
           <image src='/images/index/face.png' bindtap='clickNews' class='imgicocss' ></image>  
   </view>
  <view class="userinfo">

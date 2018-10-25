@@ -70,11 +70,10 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 const reqUrl = n => {
-  // var baseUrl = "https://www.gofbox.com/open-api"
-  return app.globalData.baseUrl+"/"+n;
+  return app.globalData.baseUrl +"/open-api/"+n;
 }
-const reqShortUrl = n => {
-  return "http://api.weibo.com/2/short_url/shorten.json?source=2849184197&url_long=" + n;
+const reqUrlv2 = n => {
+  return app.globalData.baseUrl + "/open-api-v2/" + n;
 }
 // const weekItem = ['日', '一', '二', '三', '四', '五', '六']
 const formatDay = d => {
@@ -99,6 +98,6 @@ module.exports = {
   formatSub: formatSub,
   formatTimeKey: formatTimeKey,
   wxReq: wxReq,
-  reqShortUrl: reqShortUrl,
+  reqUrlv2: reqUrlv2,
 }
 
